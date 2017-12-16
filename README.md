@@ -1,7 +1,7 @@
 Yii2 SVG Widget
 ===============
 
-The [SVG.js](http://svgjs.com) lightweight library for manipulating and animating SVG for Yii2.
+The lightweight library for manipulating and animating SVG for Yii2.
 
 Installation
 ------------
