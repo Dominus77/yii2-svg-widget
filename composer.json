@@ -1,0 +1,22 @@
+{
+    "name": "dominus77/yii2-svg-widget",
+    "description": "The lightweight library for manipulating and animating SVG for Yii2",
+    "type": "yii2-extension",
+    "keywords": ["dominus77","yii2","extension","widget","svg"],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Alexey Schevchenko",
+            "email": "ivanovosity@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*",
+        "bower-asset/svg.js": "^2.6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "dominus77\\svg\\": ""
+        }
+    }
+}
