@@ -3,6 +3,7 @@
 namespace dominus77\svg;
 
 use yii\web\JsExpression;
+use yii\base\InvalidConfigException;
 
 /**
  * Class SvgWidget
@@ -13,6 +14,13 @@ class SvgWidget extends \yii\base\Widget
     /** @var  string */
     public $elementId;
     public $clientScript;
+
+    public function init()
+    {
+        parent::init();
+        if (empty($this->elementId))
+            throw new InvalidConfigException('The "elementId" property must be set.');
+    }
 
     public function run()
     {
@@ -28,7 +36,9 @@ class SvgWidget extends \yii\base\Widget
                 var draw = SVG('{$this->elementId}');
                 {$this->clientScript}
             } else {
-                alert('SVG not supported');
+                var elementId = document.getElementById('{$this->elementId}'),
+                msg = 'SVG not supported';
+                elementId.innerHTML = msg;
             }
         ");
         $view->registerJs($script);
