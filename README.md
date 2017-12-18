@@ -37,6 +37,34 @@ Once the extension is installed, simply use it in your code by:
     "),
 ]); ?>
 ```
+Example:
+-----
+Render map
+```
+<?php
+// This get demo data
+$fileName = 'russia'; // russia or world
+$file = Yii::getAlias('@dominus77/svg/example') . "/" . $fileName . ".json";
+$data = file_get_contents($file);
+?>
+
+<div id="svg_map_russia"></div>
+<?php \dominus77\svg\SvgWidget::widget([
+    'elementId' => 'svg_map_russia',
+    'clientScript' => new \yii\web\JsExpression("
+        var mapDraw = draw.size(1000, 600);
+        var data = {$data};
+        // draw individual data
+        for	(var i = 0, il = data.length; i < il; i++) {
+            mapDraw.path(data[i]['d'])
+                .fill('none')
+                .stroke({ color: data[i]['stroke'], width: data[i]['stroke-width'] });
+
+        }
+    "),
+]); ?>
+```
+
 More Information
 -----
 Please, check the [SVG.js](http://svgjs.com)
