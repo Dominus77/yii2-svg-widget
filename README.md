@@ -55,10 +55,10 @@ $data = file_get_contents($file);
         var mapDraw = draw.size(1000, 600);
         var data = {$data};
         // draw individual data
-        for	(var i = 0, il = data.length; i < il; i++) {
+        for(var i = 0, il = data.length; i < il; i++){
             mapDraw.path(data[i]['d'])
                 .fill('none')
-                .stroke({ color: data[i]['stroke'], width: data[i]['stroke-width'] });
+                .stroke({color: data[i]['stroke'], width: data[i]['stroke-width']});
 
         }
     "),
