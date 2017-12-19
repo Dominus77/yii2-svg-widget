@@ -12,7 +12,8 @@
     ],
     "require": {
         "yiisoft/yii2": "*",
-        "bower-asset/svg.js": "^2.6.3"
+        "bower-asset/svg.js": "^2.6",
+        "bower-asset/svg.panzoom.js": "^1.2"
     },
     "autoload": {
         "psr-4": {

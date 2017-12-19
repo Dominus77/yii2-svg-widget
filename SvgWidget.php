@@ -13,6 +13,14 @@ class SvgWidget extends \yii\base\Widget
 {
     /** @var  string */
     public $elementId;
+
+    /**
+     * Plugin svg.panzoom.js
+     * @var bool
+     */
+    public $panZoom = false;
+
+    /** @var  string */
     public $clientScript;
 
     public function init()
@@ -31,6 +39,9 @@ class SvgWidget extends \yii\base\Widget
     {
         $view = $this->getView();
         SvgAsset::register($view);
+        if($this->panZoom) {
+            SvgPanZoomAsset::register($view);
+        }
         $script = new JsExpression("
             if (SVG.supported) {
                 var draw = SVG('{$this->elementId}');
