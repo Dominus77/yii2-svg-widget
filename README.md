@@ -47,7 +47,8 @@ $fileName = 'russia'; // russia or world
 $file = Yii::getAlias('@dominus77/svg/example') . "/" . $fileName . ".json";
 $data = file_get_contents($file);
 ?>
-
+```
+```
 <div id="svg_map_russia"></div>
 
 <?php \dominus77\svg\SvgWidget::widget([
