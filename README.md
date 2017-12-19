@@ -39,15 +39,15 @@ Once the extension is installed, simply use it in your code by:
 ```
 Example:
 -----
-Render map
+Get demo data
 ```
 <?php
-// This get demo data
 $fileName = 'russia'; // russia or world
 $file = Yii::getAlias('@dominus77/svg/example') . "/" . $fileName . ".json";
 $data = file_get_contents($file);
 ?>
 ```
+Render map
 ```
 <div id="svg_map_russia"></div>
 
