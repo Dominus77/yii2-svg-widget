@@ -91,7 +91,7 @@ Render interactive map
             .zoom(2, {x:50, y:280});
 
         // draw individual data
-        for	(var i = 0, il = data.length; i < il; i++) {
+        for(var i = 0, il = data.length; i < il; i++) {
             var region = mapDraw.path(data[i]['d'])
                 .id(data[i]['id'])
                 .fill(colorOut)
