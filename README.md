@@ -72,7 +72,7 @@ Render interactive map
 
 <?php \dominus77\svg\SvgWidget::widget([
     'elementId' => 'svg_interactive_map_russia',
-    'panZoom' => true, // on zoom plugin
+    'panZoom' => true, // on svg.panzoom.js plugin
     'clientScript' => new \yii\web\JsExpression("
         var data = {$data};
         var info = document.getElementById('info');
