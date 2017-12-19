@@ -49,20 +49,12 @@ $data = file_get_contents($file);
 ?>
 
 <div id="svg_map_russia"></div>
-<<<<<<< HEAD
-<?php \dominus77\svg\SvgWidget::widget([
-    'elementId' => 'svg_map_russia',
-    'clientScript' => new \yii\web\JsExpression("
-        var mapDraw = draw.size(1000, 600);
-        var data = {$data};
-=======
 
 <?php \dominus77\svg\SvgWidget::widget([
     'elementId' => 'svg_map_russia',
     'clientScript' => new \yii\web\JsExpression("
         var data = {$data};
         var mapDraw = draw.size(1000, 550);
->>>>>>> example
         // draw individual data
         for(var i = 0, il = data.length; i < il; i++){
             mapDraw.path(data[i]['d'])
@@ -73,8 +65,6 @@ $data = file_get_contents($file);
     "),
 ]); ?>
 ```
-<<<<<<< HEAD
-=======
 Render interactive map
 ```
 <div style="position: absolute" id="info"></div>
@@ -133,7 +123,6 @@ Render interactive map
     "),
 ]); ?>
 ```
->>>>>>> example
 
 More Information
 -----
